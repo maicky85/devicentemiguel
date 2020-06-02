@@ -3,21 +3,20 @@ repositorio para la practica del tema 6
 
 package calculadora;
 import java.util.Scanner;
-/*
-Objetivo: obtener codigo refactorizado a partir de otro que no lo esta.
+/*Objetivo: obtener codigo refactorizado a partir de otro que no lo esta.
 
-Tarea: Para esta tarea, se refactorizara un programa mal escrito, sin 
-cambiar la forma en que funciona el programa. Este programa, RPN.java
-es una calculadora de notacion inversa polaca que utiliza una pila.abstract
+	Tarea: Para esta tarea, se refactorizara un programa mal escrito, sin 
+	cambiar la forma en que funciona el programa. Este programa, RPN.java
+	es una calculadora de notacion inversa polaca que utiliza una pila.abstract
 
-Reverse Polish Notation(RPN) por ejemplo
-la expresion 4 * 5 - 7 / 2 % 3 no da 1,5 respetando la prioridad de 
-los operadores en notacion RPN seria: 4 5 * 7 2 / -3 %(pues no podemos
-poner los parentesis para alterar la prioridad)
+	Reverse Polish Notation(RPN) por ejemplo
+	la expresion 4 * 5 - 7 / 2 % 3 no da 1,5 respetando la prioridad de 
+	los operadores en notacion RPN seria: 4 5 * 7 2 / -3 %(pues no podemos
+	poner los parentesis para alterar la prioridad)
 
- Se debe reorganizar este codigo usando al menos tres de las reglas 
-vistas en clase.abstract
-*/
+	 Se debe reorganizar este codigo usando al menos tres de las reglas 
+	vistas en clase.abstract
+	*/
 
 class NodoPila{
 	
@@ -31,6 +30,7 @@ class NodoPila{
 
 class RPN{
 	/**clase que contiene los metodos que hacen las operaciones*/
+	
 	public void pushPila(double nuevo_dato) {
 		NodoPila nuevo_nodo= new NodoPila(nuevo_dato, arriba);
 		arriba=nuevo_nodo;
