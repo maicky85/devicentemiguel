@@ -105,25 +105,25 @@ class RPN{
 	private NodoPila arriba;
 }
 
-public class TestRPN{
-	/**clase principal que contendra el metodo main.
-	 * como no entiendo realmente como funciona lo de la RPN, pondre los comentarios de javadoc intentando no resultar demasiado absurdo
-	 * @author curso EDD
-	 * @version 1.0.0
-	 */
-	/*metodo main*/
-	public static void main(String args[]) {
-		while(true) {
-			Scanner in=new Scanner (System.in);
-			System.out.println("introduce expresion Postfija o teclea\"fin\".");
-			String linea=in.nextLine();
-			if(linea.equals("fin")) {
-				System.out.println("fin del programa");
-				break;
-			}else {
-				RPN calc=new RPN(linea);
-				System.out.printf("El resultado es %f\n",calc.resultado());
-			}
+	public class TestRPN{
+		/**clase principal que contendra el metodo main.
+		 * como no entiendo realmente como funciona lo de la RPN, pondre los comentarios de javadoc intentando no 		resultar demasiado absurdo
+		 * @author curso EDD
+		 * @version 1.0.0
+		 */
+		/*metodo main*/
+		public static void main(String args[]) {
+			while(true) {
+				Scanner in=new Scanner (System.in);
+				System.out.println("introduce expresion Postfija o teclea\"fin\".");
+				String linea=in.nextLine();
+				if(linea.equals("fin")) {
+					System.out.println("fin del programa");
+					break;
+				}else {
+					RPN calc=new RPN(linea);
+					System.out.printf("El resultado es %f\n",calc.resultado());
+				}
+			}	
 		}
 	}
-}
