@@ -66,32 +66,23 @@ class RPN{
 				//convertir a double y añadir a la pila
 				numero=Double.parseDouble(temp);
 				pushPila(numero);				
-			}else if(commando.charAt(i)=='+') {
+			}else {
 				b=popPila();
 				a=popPila();
-				pushPila(a+b);
-			}else if(commando.charAt(i)=='-') {
-				b=popPila();
-				a=popPila();
-				pushPila(a-b);
-			}else if(commando.charAt(i)=='*') {
-				b=popPila();
-				a=popPila();
-				pushPila(a*b);
-			}else if(commando.charAt(i)=='/') {
-				b=popPila();
-				a=popPila();
-				pushPila(a/b);
-			}else if(commando.charAt(i)=='^') {
-				b=popPila();
-				a=popPila();
-				pushPila(Math.pow(a, b));
-			}else if(commando.charAt(i)=='%') {
-				b=popPila();
-				a=popPila();
-				pushPila(a%b);
-			}else if(commando.charAt(i)!=' ') {
-				throw new IllegalArgumentException();
+				if(commando.charAt(i)=='+') {
+					pushPila(a+b);
+				}else if(commando.charAt(i)=='-') {
+					pushPila(a-b);
+				}else if(commando.charAt(i)=='*') {
+					pushPila(a*b);
+				}else if(commando.charAt(i)=='/') {
+					pushPila(a/b);
+				}else if(commando.charAt(i)=='^') {
+					pushPila(Math.pow(a, b));
+				}else if(commando.charAt(i)=='%') {
+					pushPila(a%b);
+				}else if(commando.charAt(i)!=' ') {
+					throw new IllegalArgumentException();
 			}
 		}
 		double val=popPila();
